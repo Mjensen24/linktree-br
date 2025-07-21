@@ -1,26 +1,224 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Hide Next.js development indicator more aggressively */
+div[style*="position: fixed"][style*="bottom"][style*="left"] {
+  display: none !important;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+div[data-nextjs-toast-errors] {
+  display: none !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+div[data-nextjs-preloader] {
+  display: none !important;
+}
+
+/* Hide any Next.js development overlay */
+[data-nextjs] {
+  display: none !important;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #fef3e2 0%, #fce4ec 100%);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.profile-section {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.profile-picture {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.profile-border {
+  width: 128px;
+  height: 128px;
+  background: linear-gradient(135deg, #ff6b9d, #c471ed, #12c2e9);
+  border-radius: 50%;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-inner {
+  width: 120px;
+  height: 120px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: #666;
+  overflow: hidden;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  border-radius: 50%;
+}
+
+.profile-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 24px 0;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* TikTok - Black with red accent */
+.social-tiktok {
+  background: linear-gradient(135deg, #000000, #ff0050);
+}
+
+.social-tiktok:hover {
+  background: linear-gradient(135deg, #ff0050, #000000);
+}
+
+/* Instagram - Purple/Pink gradient */
+.social-instagram {
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+}
+
+.social-instagram:hover {
+  background: linear-gradient(135deg, #fcb045, #fd1d1d, #833ab4);
+}
+
+/* Twitter/X - Black */
+.social-twitter {
+  background: #000000;
+}
+
+.social-twitter:hover {
+  background: #333333;
+}
+
+/* YouTube - Red */
+.social-youtube {
+  background: linear-gradient(135deg, #ff0000, #cc0000);
+}
+
+.social-youtube:hover {
+  background: linear-gradient(135deg, #cc0000, #ff0000);
+}
+
+/* Snapchat - Yellow with black icon */
+.social-snapchat {
+  background: linear-gradient(135deg, #fffc00, #fff700);
+  color: #000000;
+}
+
+.social-snapchat:hover {
+  background: linear-gradient(135deg, #fff700, #fffc00);
+  color: #000000;
+}
+
+/* Email - Blue/Teal */
+.social-email {
+  background: linear-gradient(135deg, #0084ff, #00c6ff);
+}
+
+.social-email:hover {
+  background: linear-gradient(135deg, #00c6ff, #0084ff);
+}
+
+.link-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.link-button, .link-button-blue {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  padding: 16px 24px;
+  border-radius: 50px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.link-button {
+  background: linear-gradient(135deg, #ec4899, #f472b6);
+}
+
+.link-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.link-button-blue {
+  background: linear-gradient(135deg, #00b4ff, #00d4ff);
+}
+
+.link-button-blue:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 180, 255, 0.3);
+}
+
+.link-title {
+  font-size: 16px;
+  font-weight: 600;
 }
