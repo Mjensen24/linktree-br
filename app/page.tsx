@@ -57,12 +57,7 @@ export default function Home() {
   const linkButtons = [
     { 
       title: "Exclusive Content (;", 
-      url: "https://onlyfans.com/petite.princessxo",
-      className: "link-button-blue"
-    },
-    { 
-      title: "Hidden <3", 
-      url: "https://hidden.com/petite.princessxo",
+      url: "https://juicy.bio/brooklynrose",
       className: "link-button-blue"
     },
     { 
