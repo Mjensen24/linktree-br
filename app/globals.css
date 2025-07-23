@@ -33,14 +33,15 @@ body {
   margin: 0 auto;
   padding: 20px;
   min-height: 100vh;
+  min-height: 100dvh; /* Dynamic viewport height for mobile */
   width: 100%;
 }
 
-/* Responsive breakpoints */
+/* Mobile specific container fix */
 @media (max-width: 480px) {
   .container {
-    max-width: 350px;
-    padding: 16px;
+    min-height: auto; /* Remove min-height on mobile */
+    padding-bottom: 20px; /* Ensure bottom spacing */
   }
 }
 
@@ -483,6 +484,40 @@ body {
   }
 }
 
+/* Reddit Section Styling */
+.reddit-section {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reddit-embed-bq {
+  margin: 0 auto !important;
+  max-width: 100%;
+}
+
+/* Responsive Reddit styling */
+@media (max-width: 480px) {
+  .reddit-section {
+    margin-top: 32px;
+  }
+  
+  .reddit-embed-bq {
+    height: 400px !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .reddit-section {
+    margin-top: 48px;
+  }
+  
+  .reddit-embed-bq {
+    height: 550px !important;
+  }
+}
+
 /* Twitter Section Styling */
 .twitter-section {
   margin-top: 40px;
@@ -506,4 +541,82 @@ body {
   .twitter-section {
     margin-top: 48px;
   }
+}
+
+/* Footer Styling */
+.footer {
+  margin-top: 60px;
+  padding: 24px 0;
+  background: linear-gradient(135deg, #ec4899, #f472b6);
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+  margin: 0;
+}
+
+.footer p {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Footer Styling */
+.footer {
+  margin-top: 60px;
+  margin-bottom: 20px; /* Add bottom margin */
+  padding: 24px 0;
+  background: linear-gradient(135deg, #ec4899, #f472b6);
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+  margin: 0;
+}
+
+.footer p {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Responsive Footer styling */
+@media (max-width: 480px) {
+  .footer {
+    margin-top: 40px; /* Reduced margin for mobile */
+    margin-bottom: 20px;
+    padding: 20px 0;
+  }
+  
+  .footer p {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 769px) {
+  .footer {
+    margin-top: 72px;
+    padding: 28px 0;
+  }
+  
+  .footer p {
+    font-size: 15px;
+  }
+}
+
+/* Reddit - Orange background */
+.social-reddit {
+  background: #ff4500;
+}
+
+.social-reddit:hover {
+  background: #ff6500;
 }
