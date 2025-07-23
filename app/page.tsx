@@ -25,6 +25,14 @@ export default function Home() {
       className: 'social-instagram'
     },
     { 
+      name: 'Snapchat', 
+      icon: (
+        <span style={{ fontSize: '24px' }}>👻</span>
+      ), 
+      url: 'https://www.snapchat.com/@brooklyn-rosexo',
+      className: 'social-snapchat'
+    },
+    { 
       name: 'Twitter', 
       icon: (
         <svg viewBox="0 0 24 24" fill="currentColor">
@@ -43,20 +51,12 @@ export default function Home() {
       ), 
       url: 'https://www.youtube.com/@youdontknowme82',
       className: 'social-youtube'
-    },
-    { 
-      name: 'Snapchat', 
-      icon: (
-        <span style={{ fontSize: '24px' }}>👻</span>
-      ), 
-      url: 'https://www.snapchat.com/@brooklyn-rosexo',
-      className: 'social-snapchat'
     }
   ]
 
   const linkButtons = [
     { 
-      title: "Exclusive Content (;", 
+      title: "Exclusive Content ;)", 
       url: "https://juicy.bio/brooklynrose",
       className: "link-button-blue"
     },
