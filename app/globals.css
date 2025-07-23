@@ -33,6 +33,36 @@ body {
   margin: 0 auto;
   padding: 20px;
   min-height: 100vh;
+  width: 100%;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 480px) {
+  .container {
+    max-width: 350px;
+    padding: 16px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    max-width: 450px;
+    padding: 24px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    max-width: 500px;
+    padding: 32px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .container {
+    max-width: 550px;
+    padding: 40px;
+  }
 }
 
 .header {
@@ -92,11 +122,82 @@ body {
   margin: 0 0 24px 0;
 }
 
+/* Responsive profile styling */
+@media (max-width: 480px) {
+  .profile-name {
+    font-size: 22px;
+    margin: 0 0 20px 0;
+  }
+  
+  .profile-border {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .profile-inner {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media (min-width: 769px) {
+  .profile-name {
+    font-size: 28px;
+    margin: 0 0 28px 0;
+  }
+  
+  .profile-border {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .profile-inner {
+    width: 170px;
+    height: 170px;
+  }
+}
+
 .social-icons {
   display: flex;
   justify-content: center;
   gap: 16px;
   margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+/* Responsive social icons */
+@media (max-width: 480px) {
+  .social-icons {
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  
+  .social-icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .social-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (min-width: 769px) {
+  .social-icons {
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .social-icon {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .social-icon svg {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .social-icon {
@@ -184,6 +285,19 @@ body {
   gap: 16px;
 }
 
+/* Responsive link buttons spacing */
+@media (max-width: 480px) {
+  .link-buttons {
+    gap: 12px;
+  }
+}
+
+@media (min-width: 769px) {
+  .link-buttons {
+    gap: 20px;
+  }
+}
+
 .link-button, .link-button-blue {
   display: block;
   text-decoration: none;
@@ -196,6 +310,21 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
+}
+
+/* Responsive link button sizing */
+@media (max-width: 480px) {
+  .link-button, .link-button-blue {
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 769px) {
+  .link-button, .link-button-blue {
+    padding: 18px 28px;
+    font-size: 17px;
+  }
 }
 
 .link-button {
