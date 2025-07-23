@@ -145,6 +145,47 @@ export default function Home() {
           </a>
         ))}
       </div>
+
+      {/* TikTok Videos Section */}
+      <div className="tiktok-section">
+        <div className="tiktok-scroll-container">
+          <div className="tiktok-video">
+            <iframe
+              src="https://www.tiktok.com/embed/7448334536733150506"
+              width="300"
+              height="533"
+              frameBorder="0"
+              scrolling="no"
+              allow="encrypted-media"
+              title="TikTok video 1"
+            ></iframe>
+          </div>
+          
+          <div className="tiktok-video">
+            <iframe
+              src="https://www.tiktok.com/embed/7397489337752898859"
+              width="300"
+              height="533"
+              frameBorder="0"
+              scrolling="no"
+              allow="encrypted-media"
+              title="TikTok video 2"
+            ></iframe>
+          </div>
+          
+          <div className="tiktok-video">
+            <iframe
+              src="https://www.tiktok.com/embed/7421580804960292142"
+              width="300"
+              height="533"
+              frameBorder="0"
+              scrolling="no"
+              allow="encrypted-media"
+              title="TikTok video 3"
+            ></iframe>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
