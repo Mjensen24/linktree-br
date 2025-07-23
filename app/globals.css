@@ -408,8 +408,6 @@ body {
   border-radius: 12px;
 }
 
-
-
 /* Responsive TikTok styling */
 @media (max-width: 480px) {
   .tiktok-section {
@@ -428,14 +426,14 @@ body {
   
   .tiktok-video iframe {
     width: 250px;
-    height: 444px;
+    height: 550px;
   }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
   .tiktok-video iframe {
     width: 280px;
-    height: 498px;
+    height: 620px;
   }
 }
 
@@ -456,6 +454,56 @@ body {
   
   .tiktok-video iframe {
     width: 320px;
-    height: 569px;
+    height: 700px;
+  }
+}
+
+/* Instagram Section Styling */
+.instagram-section {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.instagram-media {
+  margin: 0 auto !important;
+}
+
+/* Responsive Instagram styling */
+@media (max-width: 480px) {
+  .instagram-section {
+    margin-top: 32px;
+  }
+}
+
+@media (min-width: 769px) {
+  .instagram-section {
+    margin-top: 48px;
+  }
+}
+
+/* Twitter Section Styling */
+.twitter-section {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.twitter-tweet {
+  margin: 0 auto !important;
+}
+
+/* Responsive Twitter styling */
+@media (max-width: 480px) {
+  .twitter-section {
+    margin-top: 32px;
+  }
+}
+
+@media (min-width: 769px) {
+  .twitter-section {
+    margin-top: 48px;
   }
 }
