@@ -140,7 +140,7 @@ export default function Home() {
         </div>
         
         {/* Name */}
-        <h1 className="profile-name">Brooklyn Rose</h1>
+        <h1 className="profile-name">✨Brooklyn Rose💕</h1>
         
         {/* Social Icons Row */}
         <div className="social-icons">

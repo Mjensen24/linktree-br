@@ -289,6 +289,28 @@ body {
   background: linear-gradient(135deg, #00c6ff, #0084ff);
 }
 
+/* Button Animation Keyframes */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 0 rgba(0, 180, 255, 0);
+  }
+  50% {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 30px rgba(0, 180, 255, 0.8);
+  }
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-0.5deg);
+  }
+  75% {
+    transform: rotate(0.5deg);
+  }
+}
+
 .link-buttons {
   display: flex;
   flex-direction: column;
@@ -349,12 +371,15 @@ body {
 
 .link-button-blue {
   background: linear-gradient(135deg, #00b4ff, #00d4ff);
+  /* Add the combined animations */
+  animation: glow 2s ease-in-out infinite, wiggle 0.5s ease-in-out infinite;
 }
 
 .link-button-blue:hover {
   opacity: 0.9;
-  transform: translateY(-2px);
+  transform: translateY(-2px) rotate(0deg); /* Override wiggle on hover */
   box-shadow: 0 6px 8px rgba(0, 180, 255, 0.3);
+  animation-play-state: paused; /* Pause animations on hover */
 }
 
 .link-title {
